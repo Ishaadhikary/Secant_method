@@ -28,7 +28,7 @@ def secant_method(x0, x1, tol, Max):
     print('\n Hence,The required root is: %0.5f' % x2)
     print('--------------------------------------------')
 
-
+#initialization
 x0 = float(input('Enter first value: '))
 x1 = float(input('Enter second value: '))
 tol = float(input('Enter the error tolerance: '))
