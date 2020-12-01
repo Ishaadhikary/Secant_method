@@ -21,11 +21,16 @@ def secant_method(x0, x1, tol, Max):
     print('--------------------------------------------')
     iteration = 1
     cond = True
+    if f(x0)*f(x1)>0:
+            print('Please Change value of x and y and try again')
+            quit()
     while cond:
         if f(x0) == f(x1):
             print('Error!')
             quit()
         
+        
+
         x2 = x0 - (x1-x0)*f(x0)/( f(x1) - f(x0) ) 
         print('Iteration: %d, x2 = %0.5f and f(x2) = %0.5f' % (iteration, x2, f(x2)))
         x0 = x1
@@ -44,12 +49,13 @@ def secant_method(x0, x1, tol, Max):
     print('--------------------------------------------')
 
 #initialization
+ 
 x0 = float(input('Enter first value: '))
 x1 = float(input('Enter second value: '))
 tol = float(input('Enter the error tolerance: '))
-
 print("The Tolerance Error is:", tol)
 Max = int(input('Maximum number of iteration: '))
+   
 
 
-secant_method(x0, x1, tol, Max)
+secant_method(x0,x1,tol,Max)
